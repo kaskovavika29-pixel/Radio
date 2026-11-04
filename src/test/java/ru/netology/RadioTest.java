@@ -8,7 +8,7 @@ public class RadioTest {
     @Test
     public void shouldInitWithDefaultConstructor() {
         Radio radio = new Radio();
-        Assertions.assertEquals(10, radio.getMaxStationsCount());
+        Assertions.assertEquals(10, radio.getStationsCount());
         Assertions.assertEquals(0, radio.getCurrentStation());
         Assertions.assertEquals(0, radio.getCurrentVolume());
     }
@@ -16,13 +16,13 @@ public class RadioTest {
     @Test
     public void shouldInitWithCustomConstructor() {
         Radio radio = new Radio(30);
-        Assertions.assertEquals(30, radio.getMaxStationsCount());
+        Assertions.assertEquals(30, radio.getStationsCount());
     }
 
     @Test
     public void shouldNotInitWithNegativeConstructor() {
         Radio radio = new Radio(-5);
-        Assertions.assertEquals(10, radio.getMaxStationsCount());
+        Assertions.assertEquals(10, radio.getStationsCount());
     }
 
     @Test
